@@ -8,6 +8,6 @@ from pyspark.sql.functions import col, lit
 from pyspark.sql.types import StructType, StructField, StringType,IntegerType
 
 spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
-
+spark.sql("SELECT 1 AS col1").show()
 print(spark)
 
