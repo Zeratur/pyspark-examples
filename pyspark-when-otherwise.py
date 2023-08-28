@@ -49,6 +49,6 @@ data2 = [(66, "a", "4"), (67, "a", "0"), (70, "b", "4"), (71, "d", "4")]
 df5 = spark.createDataFrame(data = data2, schema = ["id", "code", "amt"])
          
 
-df5.withColumn("new_column", when(col("code") == "a" | col("code") == "d", "A")
-      .when(col("code") == "b" & col("amt") == "4", "B")
+df5.withColumn("new_column", when((col("code") == "a") | (col("code") == "d"), "A")
+      .when((col("code") == "b") & (col("amt") == "4"), "B")
       .otherwise("A1")).show()
