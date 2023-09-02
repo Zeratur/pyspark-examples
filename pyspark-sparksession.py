@@ -24,7 +24,7 @@ print("Master :"+sparkSession2.sparkContext.master)
 
 
 # sparkSession3 = SparkSession.newSession
-sparkSession3 = spark.newSession()
+sparkSession3 = sparkSession2.newSession()
 
 print("Second SparkContext:")
 print("APP Name :"+sparkSession3.sparkContext.appName)
