@@ -9,22 +9,23 @@ spark = SparkSession.builder.master("local[1]") \
                     .appName('SparkByExamples.com') \
                     .getOrCreate()
 
-print("First SparkContext:");
-print("APP Name :"+spark.sparkContext.appName);
-print("Master :"+spark.sparkContext.master);
+print("First SparkContext:")
+print("APP Name :"+spark.sparkContext.appName)
+print("Master :"+spark.sparkContext.master)
 
 sparkSession2 = SparkSession.builder \
       .master("local[1]") \
       .appName("SparkByExample-test") \
-      .getOrCreate();
+      .getOrCreate()
 
 print("Second SparkContext:")
-print("APP Name :"+sparkSession2.sparkContext.appName);
-print("Master :"+sparkSession2.sparkContext.master);
+print("APP Name :"+sparkSession2.sparkContext.appName)
+print("Master :"+sparkSession2.sparkContext.master)
 
 
-sparkSession3 = SparkSession.newSession
+# sparkSession3 = SparkSession.newSession
+sparkSession3 = spark.newSession()
 
 print("Second SparkContext:")
-print("APP Name :"+sparkSession3.sparkContext.appName);
-print("Master :"+sparkSession3.sparkContext.master);
+print("APP Name :"+sparkSession3.sparkContext.appName)
+print("Master :"+sparkSession3.sparkContext.master)
