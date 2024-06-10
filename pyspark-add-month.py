@@ -3,10 +3,9 @@
 author SparkByExamples.com
 """
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, expr
 
 spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
-
-from pyspark.sql.functions import col, expr
 
 data = [("2019-01-23", 1), ("2019-06-24", 2), ("2019-09-20", 3)]
 spark.createDataFrame(data).toDF("date", "increment") \
