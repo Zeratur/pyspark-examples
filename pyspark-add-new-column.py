@@ -37,7 +37,7 @@ from pyspark.sql.functions import concat_ws
 df.withColumn("name", concat_ws(",", "firstname", 'lastname')) \
     .show()
 
-#Add current date
+# Add current date
 from pyspark.sql.functions import current_date
 
 df.withColumn("current_date", current_date()) \
