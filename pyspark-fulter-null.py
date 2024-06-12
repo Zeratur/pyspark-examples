@@ -24,4 +24,5 @@ df.filter("state is NULL").show()
 df.filter(df.state.isNull()).show()
 df.filter(col("state").isNull()).show() 
 
-df.na.drop("state").show()
+# df.na.drop("state").show()
+df.na.drop(subset=["state"]).show()
