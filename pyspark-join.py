@@ -25,10 +25,10 @@ empDF = spark.createDataFrame(data=emp, schema=empColumns)
 empDF.printSchema()
 empDF.show(truncate=False)
 
-dept = [("Finance", 10), \
-        ("Marketing", 20), \
-        ("Sales", 30), \
-        ("IT", 40) \
+dept = [("Finance", 10),
+        ("Marketing", 20),
+        ("Sales", 30),
+        ("IT", 40)
         ]
 deptColumns = ["dept_name", "dept_id"]
 deptDF = spark.createDataFrame(data=dept, schema=deptColumns)
